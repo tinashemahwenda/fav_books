@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens/homepage.dart';
+
 void main() {
   runApp(BooksApp());
 }
@@ -14,6 +16,8 @@ class BooksApp extends StatefulWidget {
 class _BooksAppState extends State<BooksApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      home: HomePage(),
+    );
   }
 }
