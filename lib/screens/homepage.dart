@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../models/books.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -9,6 +11,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<Book> _books = [
+    Book(id: '1', title: 'Book 1', author: 'Author 1'),
+    Book(id: '2', title: 'Book 2', author: 'Author 2'),
+    Book(id: '3', title: 'Book 3', author: 'Author 3'),
+  ];
   List<String> _favoriteBooks = [];
 
   @override
@@ -45,7 +52,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
+      body: ListView.builder(
+        itemCount: ,
+        itemBuilder: itemBuilder) 
     );
   }
 }
