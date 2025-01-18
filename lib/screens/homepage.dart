@@ -52,9 +52,20 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemCount: ,
-        itemBuilder: itemBuilder) 
-    );
+        body: ListView.builder(
+            itemCount: _books.length,
+            itemBuilder: (context, index) {
+              final book = _books[index];
+              final isFavorite = _isFavorite(book.id);
+
+              return ListTile(
+                title: Text(book.title),
+                subtitle: Text(book.author),
+                trailing: IconButton(
+                    onPressed: () => _toggleFavorite(book.id),
+                    icon: Icon(
+                        isFavorite ? Icons.favorite : Icons.favorite_border)),
+              );
+            }));
   }
 }
