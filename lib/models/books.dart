@@ -12,4 +12,11 @@ class Book {
       author: json['author'],
     );
   }
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'title': title,
+      'author': author,
+    };
+  }
 }
